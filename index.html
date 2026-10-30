@@ -96,6 +96,9 @@ p { margin: 0; }
 .photo span { font-size: 0.72rem; color: #b9bec6; }
 .photo.art { display: block; overflow: hidden; background: #cdeae6; padding: 0; }
 .photo.art svg { width: 100%; height: 100%; min-height: inherit; display: block; }
+.photo.framed { display: block; padding: 8px; background: #ffffff; border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 22px 40px -14px rgba(0,0,0,.35); transform: rotate(-1.5deg); }
+.photo.framed img { display: block; width: 100%; height: 100%; min-height: 12.5rem; object-fit: cover; object-position: 50% 12%; border-radius: 12px; }
 .who { display: grid; gap: 0.75rem; align-content: start; min-width: 0; }
 .who-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
 .who h1 { font-size: clamp(2.2rem, 4.5vw, 3rem); font-weight: 700; }
@@ -259,44 +262,8 @@ footer { text-align: center; font-size: 0.82rem; color: var(--muted); padding-to
 
     <!-- Profile -->
     <header class="card s5 profile">
-      <div class="photo art" role="img" aria-label="Hình minh họa chân dung nam mặc vest, đang mỉm cười">
-        <svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="av-bg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#e4f5f2"/>
-              <stop offset="1" stop-color="#b6e0da"/>
-            </linearGradient>
-          </defs>
-          <rect width="200" height="240" fill="url(#av-bg)"/>
-          <circle cx="160" cy="44" r="26" fill="#ffffff" opacity=".45"/>
-          <!-- neck -->
-          <rect x="87" y="138" width="26" height="46" rx="9" fill="#e2b18c"/>
-          <!-- suit -->
-          <path d="M14 240 C20 198 52 180 100 176 C148 180 180 198 186 240 Z" fill="#1f2a3a"/>
-          <path d="M78 178 L100 224 L122 178 Z" fill="#ffffff"/>
-          <path d="M96 188 L104 188 L108 220 L100 230 L92 220 Z" fill="#19a89a"/>
-          <path d="M95 182 L105 182 L104 190 L96 190 Z" fill="#14867b"/>
-          <path d="M84 172 L100 190 L93 197 L79 181 Z" fill="#f4f6f8"/>
-          <path d="M116 172 L100 190 L107 197 L121 181 Z" fill="#f4f6f8"/>
-          <path d="M78 180 L100 226 L88 240 L64 192 Z" fill="#2c3a4f"/>
-          <path d="M122 180 L100 226 L112 240 L136 192 Z" fill="#2c3a4f"/>
-          <!-- ears + head -->
-          <ellipse cx="63" cy="112" rx="7" ry="10" fill="#eab995"/>
-          <ellipse cx="137" cy="112" rx="7" ry="10" fill="#eab995"/>
-          <ellipse cx="100" cy="108" rx="37" ry="44" fill="#f2c9a6"/>
-          <!-- hair -->
-          <path d="M62 106 C57 70 78 54 103 55 C130 56 146 74 139 106 C136 92 129 84 118 80 C106 89 84 88 72 84 C66 90 63 97 62 106 Z" fill="#1c1c21"/>
-          <!-- brows + eyes -->
-          <path d="M80 98 Q87 93 94 96" stroke="#1c1c21" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M106 96 Q113 93 120 98" stroke="#1c1c21" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M82 108 Q87 104 92 108" stroke="#1c1c21" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M108 108 Q113 104 118 108" stroke="#1c1c21" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <!-- cheeks, nose, smile -->
-          <circle cx="80" cy="124" r="6" fill="#ee9f86" opacity=".35"/>
-          <circle cx="120" cy="124" r="6" fill="#ee9f86" opacity=".35"/>
-          <path d="M100 111 Q97 121 102 123" stroke="#c8936f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M88 132 Q100 145 112 132 Z" fill="#ffffff" stroke="#8a4b3a" stroke-width="2.4" stroke-linejoin="round"/>
-        </svg>
+      <div class="photo framed">
+        <img src="portrait.jpg" alt="Chân dung Do Thanh Dat" width="600" height="720">
       </div>
       <div class="who">
         <div class="who-top">
